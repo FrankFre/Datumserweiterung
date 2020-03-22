@@ -11,7 +11,7 @@ public class Datumerweiterung {
 	public static int mintemp;	// Minute temp 
 	
 	static String eingabe;
-	static boolean calc = false;
+	static String calc = "n";
 	
 	static int[] monlaeng = new int[]  {31, 28, 31,   30, 31, 30,  	31, 31, 30,   31, 30, 31};
 	
@@ -22,16 +22,16 @@ public class Datumerweiterung {
 	
 		do  {
 
-		System.out.println("Diese Programm addiert zu einem Datum eine bestimmte Menge an Minuten");
-		System.out.println();
-		System.out.println("Bitte geben sie ein Datum im Format 1.Jahr  2.Monat  3.Tag  4.Stunde  5.Minute  6.Minuten-Summand   mit Leerzeichen ein");
+			System.out.println();
+			System.out.println("Diese Programm addiert zu einem Datum eine bestimmte Menge an Minuten");
+			System.out.println("Bitte geben sie ein Datum im Format 1.Jahr  2.Monat  3.Tag  4.Stunde  5.Minute  6.Minuten-Summand   mit Leerzeichen ein");
 			
-		j = sc.nextInt();   	// Jahr
-		m = sc.nextInt();		// Monat
-		t = sc.nextInt();		// Tag
-		s = sc.nextInt();		// Stunde
-		m1 = sc.nextInt();		// Minute
-		m2 = sc.nextInt();		// Delta-Minute
+			j = sc.nextInt();   	// Jahr
+			m = sc.nextInt();		// Monat
+			t = sc.nextInt();		// Tag
+			s = sc.nextInt();		// Stunde
+			m1 = sc.nextInt();		// Minute
+			m2 = sc.nextInt();		// Delta-Minute
 		
 
 			hochrechnenTage();
@@ -41,11 +41,11 @@ public class Datumerweiterung {
 			System.out.println(j + " " + m + " " + t + " " + s + " " + m1);
 		
 			System.out.println("Möchten sie eine neue Berechnung j/n ?");
-			eingabe = sc.next();
+			calc = sc.next();
 				
-		} while(eingabe.toString() == "j");
+		} while(calc.toString() != "j");
 
-		
+		System.out.println(calc);
 		sc.close();	
 	}	
 	
